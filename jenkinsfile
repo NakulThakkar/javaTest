@@ -1,0 +1,16 @@
+pipeline{
+  agent any
+  stages{
+    stage('checkout'){
+      steps{
+        checkout scm
+      }
+    }
+    stage('helloJenkinsfile'){
+      echo Hello from Jenkinsfile
+    }
+    stage('helloShell'){
+      sh 'echo "Hello from shell" '
+    }
+  }
+}
